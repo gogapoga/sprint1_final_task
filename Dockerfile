@@ -8,6 +8,7 @@ RUN apt update && \
     && \
     pip3 install conan==1.*
 
+
 # Запуск conan как раньше
 COPY conanfile.txt /app/
 RUN mkdir /app/build && cd /app/build && \

@@ -7,7 +7,6 @@
 
 #include "json_loader.h"
 #include "request_handler.h"
-
 using namespace std::literals;
 namespace net = boost::asio;
 namespace sys = boost::system;

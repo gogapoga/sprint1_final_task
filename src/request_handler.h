@@ -4,10 +4,7 @@
 #include <iostream>
 #include <boost/json/object.hpp>
 #include <boost/json/serialize.hpp>
-
 #define BOOST_BEAST_USE_STD_STRING_VIEW
-
-
 
 namespace http_handler {
 namespace beast = boost::beast;

@@ -46,7 +46,6 @@ namespace http_server {
                 });
         }
 
-
         ~SessionBase() = default;
     private:
         void Read();
@@ -54,11 +53,8 @@ namespace http_server {
         void Close();
         void OnWrite(bool close, beast::error_code ec, [[maybe_unused]] std::size_t bytes_written);
 
-
         // Обработку запроса делегируем подклассу
         virtual void HandleRequest(HttpRequest&& request) = 0;
-
-
         virtual std::shared_ptr<SessionBase> GetSharedThis() = 0;
 
         // tcp_stream содержит внутри себя сокет и добавляет поддержку таймаутов

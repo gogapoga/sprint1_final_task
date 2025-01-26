@@ -1,5 +1,4 @@
 #include "http_server.h"
-
 #include <boost/asio/dispatch.hpp>
 #include <iostream>
 using namespace std::literals;
@@ -43,7 +42,7 @@ namespace http_server {
 
     void SessionBase::Close() {
         beast::error_code ec;
-        stream_.socket().shutdown(tcp::socket::shutdown_send, ec);
+        stream_.socket().shutdown(tcp::socket::shutdown_send);
     }
 
     void SessionBase::OnWrite(bool close, beast::error_code ec, [[maybe_unused]] std::size_t bytes_written) {
